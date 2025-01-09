@@ -1,7 +1,6 @@
 "use client";
 import Link from "next/link";
-
-export default function Home() {
+ export default function Home() {
   return (
    <>
     <div className="flex flex-col md:flex-row items-center justify-center bg-white text-[#FF4F5A] ml-[50px] pt-[50px]">

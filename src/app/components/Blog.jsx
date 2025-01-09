@@ -1,21 +1,20 @@
 import Link from "next/link";
+import { useEffect } from "react";
 
-type props = {
-    imageUrl:string,
-    date:string,
-    month:string,
-     title:string,
-    link:string
+  
 
-  };
+  export default function Blog({ imageUrl, date, month, title, link , posts }) {
 
 
-  export default function Blog({ imageUrl, date, month, title, link }:props) {
+
+   
+
+
     return (
       <div className="relative news-card flex min-w-[300px] max-w-[300px] items-end justify-start w-full text-left group rounded-[13px] h-96 dark:bg-gray-500 overflow-hidden">
         {/* Background Image */}
         <div
-          className="news-card-image absolute inset-0 bg-cover bg-center bg-right rounded-[13px] transition-transform duration-300 group-hover:scale-[1.10]"
+          className="news-card-image absolute inset-0 bg-cover bg-center  rounded-[13px] transition-transform duration-300 group-hover:scale-[1.10]"
           style={{ backgroundImage: `url(${imageUrl})` }}
         ></div>
   
@@ -26,7 +25,7 @@ type props = {
         <div className="absolute top-0 left-0 right-0 flex items-center justify-between mx-5 mt-3">
           <Link
             rel="noopener noreferrer"
-            href={`/blog-page`}
+            href={`/blogs/blog-page/?id=${posts}`}
             className="px-3 py-2 text-xs font-semibold uppercase bg-[#FF626A] text-white rounded-[13px] relative z-10"
           >
             Read More
